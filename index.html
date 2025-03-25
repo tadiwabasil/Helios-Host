@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3D59',
+                        secondary: '#17B978'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+
+
+        // Portfolio filtering functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.dataset.filter;
+
+        // Filter items
+        portfolioItems.forEach(item => {
+            if (filterValue === 'all' || item.dataset.category === filterValue) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Update portfolioData array with additional items
+portfolioData.push(
+    {
+        image: "https://public.readdy.ai/ai/img_res/5c1a1328ecdfec8262215749d09aab4d.jpg",
+        title: "Corporate Website",
+        description: "A modern corporate website with dynamic content management and seamless user experience designed for a Fortune 500 company.",
+        client: "Global Enterprises Inc."
+    },
+    {
+        image: "https://public.readdy.ai/ai/img_res/3ee66b226749a3ecf4b6e12f3924d2bd.jpg",
+        title: "Travel Planning App",
+        description: "Mobile application that creates personalized travel itineraries with real-time updates and AI-powered recommendations.",
+        client: "Wanderlust Travel"
+    },
+    {
+        image: "https://public.readdy.ai/ai/img_res/f26792f9240553420cd1f916e81d2b0a.jpg",
+        title: "Analytics Dashboard",
+        description: "Custom data visualization dashboard with interactive charts and real-time reporting for business intelligence.",
+        client: "Data Insights Corp"
+    }
+
+
+);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+</head>
+<body class="font-['Inter'] text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-primary">Services</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-primary">Portfolio</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
+                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content"  data-animate>
+        <h1 class="hero-title">
+            <span class="hero-title-line">Transform Your</span>
+            <span class="hero-title-line">Digital Presence</span>
+        </h1>
+        <p class="hero-subtitle">Elevate your business with cutting-edge web solutions and strategic digital transformation. We turn your vision into reality.</p>
+        <div class="hero-buttons">
+            <button class="hero-button primary">Book Consultation</button>
+            <button class="hero-button secondary">&nbsp&nbsp&nbsp&nbspLearn More &nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        </div>
+    </div>
+
+    <!-- Animated background elements -->
+    <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll Down</span>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="section-header"  data-animate>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive digital solutions tailored to your needs</p>
+    </div>
+
+    <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card"  data-animate data-service="web">
+            <div class="service-icon">
+                <i class="ri-code-line"></i>
+                <div class="icon-backdrop"></div>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications built with modern technologies and best practices.</p>
+            <div class="service-footer">
+                <a href="#" class="service-link">
+                    Learn More
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+                <div class="service-hover-effect"></div>
+            </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card"  data-animate data-service="cloud">
+            <div class="service-icon">
+                <i class="ri-cloud-line"></i>
+                <div class="icon-backdrop"></div>
+            </div>
+            <h3>Cloud Solutions</h3>
+            <p>Scalable and secure cloud infrastructure for your growing business needs.</p>
+            <div class="service-footer">
+                <a href="#" class="service-link">
+                    Learn More
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+                <div class="service-hover-effect"></div>
+            </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card"  data-animate data-service="marketing">
+            <div class="service-icon">
+                <i class="ri-bar-chart-line"></i>
+                <div class="icon-backdrop"></div>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>Strategic digital marketing solutions to boost your online presence.</p>
+            <div class="service-footer">
+                <a href="#" class="service-link">
+                    Learn More
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+                <div class="service-hover-effect"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated decorative element -->
+    <div class="services-decoration">
+        <div class="deco-circle deco-1"></div>
+        <div class="deco-circle deco-2"></div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+    <div class="section-header"  data-animate>
+        <h2 class="section-title">Our Portfolio</h2>
+        <p class="section-subtitle">Showcasing our best work and client success stories</p>
+    </div>
+
+    <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="app">Mobile Apps</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item" data-category="web" onclick="showPortfolioModal(0)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/8e68acb31efdd16723f9434844bc0219.jpg" alt="E-commerce Platform" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>Modern shopping experience</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item" data-category="app" onclick="showPortfolioModal(1)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/a2948f8997405572dd328325004d910c.jpg" alt="FinTech Dashboard" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>FinTech Dashboard</h3>
+                        <p>Financial analytics platform</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item" data-category="design" onclick="showPortfolioModal(2)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/63d62234cc912030f4dc210c527108fa.jpg" alt="Health App" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>Health & Wellness App</h3>
+                        <p>Mobile health tracking</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item" data-category="web" onclick="showPortfolioModal(3)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/5c1a1328ecdfec8262215749d09aab4d.jpg" alt="Corporate Website" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>Corporate Website</h3>
+                        <p>Modern business presence</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Item 5 -->
+        <div class="portfolio-item" data-category="app" onclick="showPortfolioModal(4)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/3ee66b226749a3ecf4b6e12f3924d2bd.jpg" alt="Travel App" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>Travel Planning App</h3>
+                        <p>Personalized itinerary builder</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="portfolio-item" data-category="design" onclick="showPortfolioModal(5)">
+            <div class="portfolio-image-container">
+                <img src="https://public.readdy.ai/ai/img_res/f26792f9240553420cd1f916e81d2b0a.jpg" alt="Dashboard UI" class="portfolio-image">
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Data visualization interface</p>
+                        <div class="view-project-btn">
+                            <span>View Project</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-cta">
+        <p>Want to see more of our work?</p>
+        <button class="cta-btn">View Full Portfolio</button>
+    </div>
+</section>
+
+
+  <!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="section-header">
+        <h2 class="section-title">Client Testimonials</h2>
+        <p class="section-subtitle">What our clients say about us</p>
+    </div>
+
+    <div class="testimonials-container">
+        <!-- Testimonial Cards -->
+        <div class="testimonial-track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card active">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Working with this team has been transformative for our business. Their expertise in web development and digital strategy helped us achieve 3x growth in just six months."</p>
+                    <div class="testimonial-author">
+                        <img src="https://public.readdy.ai/ai/img_res/2653bad5adf370aa24c46d1ede162120.jpg" alt="Sarah Johnson" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Johnson</h4>
+                            <p class="author-title">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"The level of professionalism and technical expertise demonstrated by this team is outstanding. They delivered our project ahead of schedule while exceeding all expectations."</p>
+                    <div class="testimonial-author">
+                        <img src="https://public.readdy.ai/ai/img_res/ece6db459d291587a3d00091f6cf644b.jpg" alt="Michael Chen" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Michael Chen</h4>
+                            <p class="author-title">Director, Innovation Labs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Their attention to detail and creative problem-solving sets them apart. We're extremely satisfied with the results and have already started two new projects with them."</p>
+                    <div class="testimonial-author">
+                        <img src="https://public.readdy.ai/ai/img_res/006596513a6d6010f8b614a6f33e0149.jpg" alt="Emily Rodriguez" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">Emily Rodriguez</h4>
+                            <p class="author-title">Creative Director, Design Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"The mobile app they developed for us has 4.9 stars on both app stores with over 50k downloads in the first month. Their UX design approach is truly exceptional."</p>
+                    <div class="testimonial-author">
+                        <img src="https://public.readdy.ai/ai/img_res/429b3fce3fe16f95cea0b76dde92a744.jpg" alt="David Kim" class="author-image">
+                        <div class="author-info">
+                            <h4 class="author-name">David Kim</h4>
+                            <p class="author-title">Product Manager, AppVenture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="testimonial-nav">
+            <button class="nav-btn prev-btn" aria-label="Previous testimonial">
+                <i class="ri-arrow-left-line"></i>
+            </button>
+
+            <div class="pagination-dots">
+                <button class="dot active" aria-label="Show testimonial 1"></button>
+                <button class="dot" aria-label="Show testimonial 2"></button>
+                <button class="dot" aria-label="Show testimonial 3"></button>
+                <button class="dot" aria-label="Show testimonial 4"></button>
+            </div>
+
+            <button class="nav-btn next-btn" aria-label="Next testimonial">
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="testimonial-deco deco-left"></div>
+    <div class="testimonial-deco deco-right"></div>
+</section>
+
+  <!-- About Us Section -->
+<section id="about" class="about-section">
+    <div class="section-header">
+        <h2 class="section-title">About Our Company</h2>
+        <p class="section-subtitle">Crafting digital excellence since 2012</p>
+    </div>
+
+    <div class="about-content">
+        <!-- Image Column -->
+        <div class="about-image-column">
+            <div class="image-container">
+                <img src="https://public.readdy.ai/ai/img_res/56edc432524fb368a04fb82e90f703d0.jpg" alt="Our Team" class="main-image">
+                <div class="image-decorator"></div>
+
+                <!-- Achievement Badges -->
+                <div class="achievement-badge years">
+                    <span class="number">12+</span>
+                    <span class="label">Years Experience</span>
+                </div>
+
+                <div class="achievement-badge projects">
+                    <span class="number">250+</span>
+                    <span class="label">Projects Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="about-text-column">
+            <h3 class="about-heading">Driving digital transformation through innovation</h3>
+
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="mission">Our Mission</button>
+                <button class="tab-btn" data-tab="vision">Our Vision</button>
+                <button class="tab-btn" data-tab="values">Our Values</button>
+            </div>
+
+            <div class="tab-content active" id="mission">
+                <p>We empower businesses to thrive in the digital landscape by delivering cutting-edge solutions tailored to their unique needs. Our mission is to bridge the gap between technology and business goals through innovative design and strategic development.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Client-centric development approach</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Agile and adaptive methodologies</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Future-proof technology stack</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="vision">
+                <p>To become the most trusted digital partner for businesses worldwide, recognized for our technical excellence, creative problem-solving, and unwavering commitment to client success in an increasingly digital future.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Pioneering emerging technologies</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Global reach with local understanding</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Sustainable digital solutions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="values">
+                <p>Our core values define who we are and how we work. Integrity, innovation, and impact guide every decision we make and every solution we deliver.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Transparency in all interactions</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Continuous learning and growth</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Delivering measurable impact</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+
+            <button class="cta-button">
+                <span>Meet Our Team</span>
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Technologies We Use -->
+    <div class="technologies-section">
+        <h4 class="tech-title">Technologies We Excel At</h4>
+        <div class="tech-logos">
+            <div class="tech-logo" data-tooltip="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            </div>
+            <div class="tech-logo" data-tooltip="Node.js">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+            <div class="tech-logo" data-tooltip="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            </div>
+            <div class="tech-logo" data-tooltip="AWS">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+            </div>
+            <div class="tech-logo" data-tooltip="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+            </div>
+            <div class="tech-logo" data-tooltip="Figma">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-['Poppins'] font-bold text-primary mb-6">Get in Touch</h2>
+                    <p class="text-xl text-gray-600 mb-8">Ready to start your project? Contact us for a free consultation.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-map-pin-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Location</h4>
+                                <p class="contact-item-text">123 Business Avenue, Tech City, TC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-phone-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Phone</h4>
+                                <p class="contact-item-text">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-mail-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-item-title">Email</h4>
+                                <p class="contact-item-text">contact@company.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4 class="social-links-title">Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <i class="ri-linkedin-fill text-primary text-xl"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="ri-twitter-fill text-primary text-xl"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="ri-facebook-fill text-primary text-xl"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="ri-instagram-fill text-primary text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" rows="4" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We'd love to hear about your project</p>
+    </div>
+
+    <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="info-card">
+                <h3 class="info-title">Contact Information</h3>
+                <p class="info-description">Fill out the form or reach out directly through these channels:</p>
+
+                <div class="contact-methods">
+                    <!-- Phone -->
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="ri-mail-fill"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Email</h4>
+                            <a href="mailto:contact@company.com">contact@company.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="ri-map-pin-fill"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Office</h4>
+                            <address>123 Business Avenue<br>Tech City, TC 12345</address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179535!2d-73.9878449241646!3d40.74844047138959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+                <div class="map-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <div class="input-container">
+                        <i class="ri-user-line"></i>
+                        <input type="text" id="name" name="name" required>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-container">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" id="email" name="email" required>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <div class="input-container">
+                        <i class="ri-phone-line"></i>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <div class="input-container">
+                        <i class="ri-chat-3-line"></i>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <div class="input-container textarea">
+                        <i class="ri-message-2-line"></i>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <i class="ri-send-plane-line"></i>
+                </button>
+            </form>
+
+            <div class="form-success">
+                <i class="ri-checkbox-circle-fill"></i>
+                <h3>Message Sent!</h3>
+                <p>We'll get back to you within 24 hours</p>
+                <button class="reset-form">Send Another</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="modern-footer">
+    <!-- Main Footer Content -->
+    <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-column company-info">
+            <div class="footer-logo">
+                <a href="#" class="logo">DigitalSolutions</a>
+                <span class="tagline">Innovating your digital future</span>
+            </div>
+            <p class="footer-about">We transform businesses through cutting-edge digital solutions and strategic technology consulting.</p>
+
+            <div class="newsletter">
+                <h4>Subscribe to our newsletter</h4>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="ri-send-plane-line"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Cloud Solutions</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">SEO Services</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-column contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <ul class="footer-contact">
+                <li>
+                    <i class="ri-map-pin-line"></i>
+                    <span>123 Business Avenue, Tech City, TC 12345</span>
+                </li>
+                <li>
+                    <i class="ri-phone-line"></i>
+                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                </li>
+                <li>
+                    <i class="ri-mail-line"></i>
+                    <a href="mailto:contact@company.com">contact@company.com</a>
+                </li>
+            </ul>
+
+            <div class="business-hours">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9am - 6pm</p>
+                <p>Saturday: 10am - 3pm</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="ri-dribbble-line"></i></a>
+        </div>
+
+        <div class="footer-legal">
+            <p>&copy; 2025 DigitalSolutions. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+        <button class="back-to-top" aria-label="Back to top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="footer-deco deco-left"></div>
+    <div class="footer-deco deco-right"></div>
+</footer>
+
+
+
+    <script>
+      // Testimonial Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.testimonial-track');
+    const cards = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+    const cardCount = cards.length;
+
+    // Initialize carousel
+    function updateCarousel() {
+        // Update track position
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update active states
+        cards.forEach((card, index) => {
+            card.classList.toggle('active', index === currentIndex);
+        });
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Next testimonial
+    function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % cardCount;
+        updateCarousel();
+    }
+
+    // Previous testimonial
+    function prevTestimonial() {
+        currentIndex = (currentIndex - 1 + cardCount) % cardCount;
+        updateCarousel();
+    }
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    // Button events
+    nextBtn.addEventListener('click', nextTestimonial);
+    prevBtn.addEventListener('click', prevTestimonial);
+
+    // Auto-advance (optional)
+    let autoSlide = setInterval(nextTestimonial, 5000);
+
+    // Pause on hover
+    track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    track.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextTestimonial, 5000);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextTestimonial();
+        if (e.key === 'ArrowLeft') prevTestimonial();
+    });
+
+    // Initialize
+    updateCarousel();
+});
+
+        // About Us Tab Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.dataset.tab;
+
+            // Update active tab button
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show corresponding content
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Animated counter for stats
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const options = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const countTo = parseInt(target.dataset.count);
+                const duration = 2000;
+                const startTime = performance.now();
+
+                const animateCount = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    const currentCount = Math.floor(progress * countTo);
+
+                    target.textContent = currentCount;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        if (target.dataset.count === '98') {
+                            target.textContent += '%';
+                        } else if (target.dataset.count === '50') {
+                            target.textContent += '+';
+                        }
+                    }
+                };
+
+                requestAnimationFrame(animateCount);
+                observer.unobserve(target);
+            }
+        });
+    }, options);
+
+    statNumbers.forEach(number => {
+        observer.observe(number);
+    });
+});
+
+        // Contact Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.querySelector('.form-success');
+    const resetFormBtn = document.querySelector('.reset-form');
+
+    // Form submission
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Simulate form submission (replace with actual AJAX call)
+        setTimeout(() => {
+            // Show success message
+            formSuccess.classList.add('active');
+            contactForm.style.opacity = '0';
+            contactForm.style.pointerEvents = 'none';
+
+            // Reset form
+            contactForm.reset();
+        }, 1000);
+    });
+
+    // Reset form button
+    resetFormBtn.addEventListener('click', function() {
+        formSuccess.classList.remove('active');
+        contactForm.style.opacity = '1';
+        contactForm.style.pointerEvents = 'all';
+    });
+
+    // Input animations
+    const inputs = document.querySelectorAll('.input-container input, .input-container textarea');
+
+    inputs.forEach(input => {
+        // Add focus class when input has value
+        if (input.value) {
+            input.parentElement.querySelector('.underline').style.transform = 'scaleX(1)';
+        }
+
+        input.addEventListener('input', function() {
+            if (this.value) {
+                this.parentElement.querySelector('.underline').style.transform = 'scaleX(1)';
+            } else {
+                this.parentElement.querySelector('.underline').style.transform = 'scaleX(0)';
+            }
+        });
+    });
+
+    // Animate form elements on load
+    const formGroups = document.querySelectorAll('.form-group');
+
+    formGroups.forEach((group, index) => {
+        group.style.opacity = '0';
+        group.style.transform = 'translateY(20px)';
+        group.style.transition = `all 0.5s ease ${index * 0.1}s`;
+
+        setTimeout(() => {
+            group.style.opacity = '1';
+            group.style.transform = 'translateY(0)';
+        }, 500 + (index * 100));
+    });
+});
+        // Back to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    // Show/hide button on scroll
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Smooth scroll to top
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Newsletter form submission
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+
+            // Simple validation
+            if (emailInput.value && emailInput.checkValidity()) {
+                // Here you would typically send the data to your server
+                console.log('Subscribed with:', emailInput.value);
+
+                // Show success feedback
+                emailInput.value = '';
+                emailInput.placeholder = 'Thanks for subscribing!';
+
+                // Reset placeholder after 3 seconds
+                setTimeout(() => {
+                    emailInput.placeholder = 'Your email address';
+                }, 3000);
+            }
+        });
+    }
+
+    // Animate footer elements on scroll
+    const footerColumns = document.querySelectorAll('.footer-column');
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    footerColumns.forEach((column, index) => {
+        column.style.opacity = '0';
+        column.style.transform = 'translateY(20px)';
+        column.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        observer.observe(column);
+    });
+});
+        // Intersection Observer for Section Animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Add 'site-section' class to all main sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('site-section');
+    });
+
+    // Set up the intersection observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Optional: Add animation delays for child elements
+                const animatedElements = entry.target.querySelectorAll('[data-animate]');
+                animatedElements.forEach((el, index) => {
+                    el.style.animation = `fadeIn 0.6s ease-out ${index * 0.15}s forwards`;
+                });
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // For elements that should animate separately (optional)
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+    });
+});
+    </script>
+</body>
+</html>
