@@ -89,14 +89,14 @@ portfolioData.push(
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">Elevate Web Solutions</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#services" class="text-gray-600 hover:text-primary">Services</a>
                     <a href="#portfolio" class="text-gray-600 hover:text-primary">Portfolio</a>
                     <a href="#about" class="text-gray-600 hover:text-primary">About</a>
                     <a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
-                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">Get Started</button>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">Get Started</a>
                 </div>
             </div>
         </div>
@@ -112,8 +112,8 @@ portfolioData.push(
         </h1>
         <p class="hero-subtitle">Elevate your business with cutting-edge web solutions and strategic digital transformation. We turn your vision into reality.</p>
         <div class="hero-buttons">
-            <button class="hero-button primary">Book Consultation</button>
-            <button class="hero-button secondary">&nbsp&nbsp&nbsp&nbspLearn More &nbsp&nbsp&nbsp&nbsp&nbsp</button>
+            <a href="#contact" class="hero-button primary">Book Consultation</a>
+            <a href="#about" class="hero-button secondary">&nbsp&nbsp&nbsp&nbspLearn More &nbsp&nbsp&nbsp&nbsp&nbsp</a>
         </div>
     </div>
 
@@ -152,7 +152,7 @@ portfolioData.push(
             <h3>Web Development</h3>
             <p>Custom websites and web applications built with modern technologies and best practices.</p>
             <div class="service-footer">
-                <a href="#" class="service-link">
+                <a href="#contact" class="service-link">
                     Learn More
                     <i class="ri-arrow-right-line"></i>
                 </a>
@@ -166,10 +166,10 @@ portfolioData.push(
                 <i class="ri-cloud-line"></i>
                 <div class="icon-backdrop"></div>
             </div>
-            <h3>Cloud Solutions</h3>
+            <h3>Web Hosting</h3>
             <p>Scalable and secure cloud infrastructure for your growing business needs.</p>
             <div class="service-footer">
-                <a href="#" class="service-link">
+                <a href="#contact" class="service-link">
                     Learn More
                     <i class="ri-arrow-right-line"></i>
                 </a>
@@ -186,7 +186,7 @@ portfolioData.push(
             <h3>Digital Marketing</h3>
             <p>Strategic digital marketing solutions to boost your online presence.</p>
             <div class="service-footer">
-                <a href="#" class="service-link">
+                <a href="#contact" class="service-link">
                     Learn More
                     <i class="ri-arrow-right-line"></i>
                 </a>
@@ -235,13 +235,13 @@ portfolioData.push(
         </div>
 
         <!-- Portfolio Item 2 -->
-        <div class="portfolio-item" data-category="app" onclick="showPortfolioModal(1)">
+        <div class="portfolio-item" data-category="web" onclick="showPortfolioModal(3)">
             <div class="portfolio-image-container">
-                <img src="https://public.readdy.ai/ai/img_res/a2948f8997405572dd328325004d910c.jpg" alt="FinTech Dashboard" class="portfolio-image">
+                <img src="wakamu.png" alt="Corporate Website" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="overlay-content">
-                        <h3>FinTech Dashboard</h3>
-                        <p>Financial analytics platform</p>
+                        <h3>Corporate Website</h3>
+                        <p>Modern business presence</p>
                         <div class="view-project-btn">
                             <span>View Project</span>
                             <i class="ri-arrow-right-line"></i>
@@ -269,55 +269,7 @@ portfolioData.push(
         </div>
 
         <!-- Portfolio Item 4 -->
-        <div class="portfolio-item" data-category="web" onclick="showPortfolioModal(3)">
-            <div class="portfolio-image-container">
-                <img src="https://public.readdy.ai/ai/img_res/5c1a1328ecdfec8262215749d09aab4d.jpg" alt="Corporate Website" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="overlay-content">
-                        <h3>Corporate Website</h3>
-                        <p>Modern business presence</p>
-                        <div class="view-project-btn">
-                            <span>View Project</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Portfolio Item 5 -->
-        <div class="portfolio-item" data-category="app" onclick="showPortfolioModal(4)">
-            <div class="portfolio-image-container">
-                <img src="https://public.readdy.ai/ai/img_res/3ee66b226749a3ecf4b6e12f3924d2bd.jpg" alt="Travel App" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="overlay-content">
-                        <h3>Travel Planning App</h3>
-                        <p>Personalized itinerary builder</p>
-                        <div class="view-project-btn">
-                            <span>View Project</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Portfolio Item 6 -->
-        <div class="portfolio-item" data-category="design" onclick="showPortfolioModal(5)">
-            <div class="portfolio-image-container">
-                <img src="https://public.readdy.ai/ai/img_res/f26792f9240553420cd1f916e81d2b0a.jpg" alt="Dashboard UI" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="overlay-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Data visualization interface</p>
-                        <div class="view-project-btn">
-                            <span>View Project</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="portfolio-cta">
@@ -351,8 +303,8 @@ portfolioData.push(
                     <div class="testimonial-author">
                         <img src="https://public.readdy.ai/ai/img_res/2653bad5adf370aa24c46d1ede162120.jpg" alt="Sarah Johnson" class="author-image">
                         <div class="author-info">
-                            <h4 class="author-name">Sarah Johnson</h4>
-                            <p class="author-title">CEO, TechStart Inc.</p>
+                            <h4 class="author-name">Catherine Chitsiku</h4>
+                            <p class="author-title">CEO, House of Chenai</p>
                         </div>
                     </div>
                 </div>
@@ -370,10 +322,10 @@ portfolioData.push(
                     </div>
                     <p class="testimonial-text">"The level of professionalism and technical expertise demonstrated by this team is outstanding. They delivered our project ahead of schedule while exceeding all expectations."</p>
                     <div class="testimonial-author">
-                        <img src="https://public.readdy.ai/ai/img_res/ece6db459d291587a3d00091f6cf644b.jpg" alt="Michael Chen" class="author-image">
+                        <img src="user.png" alt="👤" class="author-image">
                         <div class="author-info">
-                            <h4 class="author-name">Michael Chen</h4>
-                            <p class="author-title">Director, Innovation Labs</p>
+                            <h4 class="author-name">Brandon Moyo</h4>
+                            <p class="author-title">Director, Wakamu Logistics</p>
                         </div>
                     </div>
                 </div>
@@ -391,10 +343,10 @@ portfolioData.push(
                     </div>
                     <p class="testimonial-text">"Their attention to detail and creative problem-solving sets them apart. We're extremely satisfied with the results and have already started two new projects with them."</p>
                     <div class="testimonial-author">
-                        <img src="https://public.readdy.ai/ai/img_res/006596513a6d6010f8b614a6f33e0149.jpg" alt="Emily Rodriguez" class="author-image">
+                        <img src="user.png" alt="Vimbayi Mutemeri" class="author-image">
                         <div class="author-info">
-                            <h4 class="author-name">Emily Rodriguez</h4>
-                            <p class="author-title">Creative Director, Design Co.</p>
+                            <h4 class="author-name">Tanatswa Mpupuni</h4>
+                            <p class="author-title">Creative Director, VeeCee Co.</p>
                         </div>
                     </div>
                 </div>
@@ -412,9 +364,9 @@ portfolioData.push(
                     </div>
                     <p class="testimonial-text">"The mobile app they developed for us has 4.9 stars on both app stores with over 50k downloads in the first month. Their UX design approach is truly exceptional."</p>
                     <div class="testimonial-author">
-                        <img src="https://public.readdy.ai/ai/img_res/429b3fce3fe16f95cea0b76dde92a744.jpg" alt="David Kim" class="author-image">
+                        <img src="user.png" alt="Loca" class="author-image">
                         <div class="author-info">
-                            <h4 class="author-name">David Kim</h4>
+                            <h4 class="author-name">Locadia Gwapedza</h4>
                             <p class="author-title">Product Manager, AppVenture</p>
                         </div>
                     </div>
@@ -450,7 +402,7 @@ portfolioData.push(
 <section id="about" class="about-section">
     <div class="section-header">
         <h2 class="section-title">About Our Company</h2>
-        <p class="section-subtitle">Crafting digital excellence since 2012</p>
+        <p class="section-subtitle">Crafting digital excellence</p>
     </div>
 
     <div class="about-content">
@@ -460,14 +412,14 @@ portfolioData.push(
                 <img src="https://public.readdy.ai/ai/img_res/56edc432524fb368a04fb82e90f703d0.jpg" alt="Our Team" class="main-image">
                 <div class="image-decorator"></div>
 
-                <!-- Achievement Badges -->
+                <!-- Achievement Badges
                 <div class="achievement-badge years">
                     <span class="number">12+</span>
                     <span class="label">Years Experience</span>
                 </div>
-
+                -->
                 <div class="achievement-badge projects">
-                    <span class="number">250+</span>
+                    <span class="number">25+</span>
                     <span class="label">Projects Completed</span>
                 </div>
             </div>
@@ -539,8 +491,8 @@ portfolioData.push(
 
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">Team Members</div>
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Clients</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number" data-count="98">0</div>
@@ -568,9 +520,7 @@ portfolioData.push(
             <div class="tech-logo" data-tooltip="Python">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
             </div>
-            <div class="tech-logo" data-tooltip="AWS">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
-            </div>
+
             <div class="tech-logo" data-tooltip="Docker">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
             </div>
@@ -581,85 +531,7 @@ portfolioData.push(
     </div>
 </section>
 
-    <!-- Contact Section
-    <section id="contact" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-['Poppins'] font-bold text-primary mb-6">Get in Touch</h2>
-                    <p class="text-xl text-gray-600 mb-8">Ready to start your project? Contact us for a free consultation.</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-map-pin-line text-primary text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-item-title">Location</h4>
-                                <p class="contact-item-text">123 Business Avenue, Tech City, TC 12345</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-phone-line text-primary text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-item-title">Phone</h4>
-                                <p class="contact-item-text">+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-mail-line text-primary text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-item-title">Email</h4>
-                                <p class="contact-item-text">contact@company.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <h4 class="social-links-title">Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">
-                                <i class="ri-linkedin-fill text-primary text-xl"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="ri-twitter-fill text-primary text-xl"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="ri-facebook-fill text-primary text-xl"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="ri-instagram-fill text-primary text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Name</label>
-                            <input type="text" id="name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="email">Email</label>
-                            <input type="email" id="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="message">Message</label>
-                            <textarea id="message" rows="4" class="form-textarea" required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
--->
+
 
     <!-- Contact Section -->
 <section id="contact" class="contact-section">
@@ -683,7 +555,7 @@ portfolioData.push(
                         </div>
                         <div class="method-details">
                             <h4>Phone</h4>
-                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            <a href="tel:+263717765236">+263717765236</a>
                         </div>
                     </div>
 
@@ -694,7 +566,7 @@ portfolioData.push(
                         </div>
                         <div class="method-details">
                             <h4>Email</h4>
-                            <a href="mailto:contact@company.com">contact@company.com</a>
+                            <a href="mailto:elevatewebsol@gmail.com">elevatewebsol@gmail.com</a>
                         </div>
                     </div>
 
@@ -705,7 +577,7 @@ portfolioData.push(
                         </div>
                         <div class="method-details">
                             <h4>Office</h4>
-                            <address>123 Business Avenue<br>Tech City, TC 12345</address>
+                            <address>6474 Zimta Park<br>Mutare, Zimbabwe</address>
                         </div>
                     </div>
                 </div>
@@ -729,7 +601,7 @@ portfolioData.push(
                 </div>
             </div>
 
-            <!-- Map -->
+            <!-- Map
             <div class="contact-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179535!2d-73.9878449241646!3d40.74844047138959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                         width="100%"
@@ -738,7 +610,7 @@ portfolioData.push(
                         allowfullscreen=""
                         loading="lazy"></iframe>
                 <div class="map-overlay"></div>
-            </div>
+            </div>-->
         </div>
 
         <!-- Contact Form -->
@@ -812,7 +684,7 @@ portfolioData.push(
         <!-- Company Info -->
         <div class="footer-column company-info">
             <div class="footer-logo">
-                <a href="#" class="logo">DigitalSolutions</a>
+                <a href="#" class="logo">Elevate Web Solutions</a>
                 <span class="tagline">Innovating your digital future</span>
             </div>
             <p class="footer-about">We transform businesses through cutting-edge digital solutions and strategic technology consulting.</p>
@@ -862,22 +734,22 @@ portfolioData.push(
             <ul class="footer-contact">
                 <li>
                     <i class="ri-map-pin-line"></i>
-                    <span>123 Business Avenue, Tech City, TC 12345</span>
+                    <span>6474 Zimta Park, Mutare, Zimbabwe</span>
                 </li>
                 <li>
                     <i class="ri-phone-line"></i>
-                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    <a href="tel:+15551234567">+263717765236</a>
                 </li>
                 <li>
                     <i class="ri-mail-line"></i>
-                    <a href="mailto:contact@company.com">contact@company.com</a>
+                    <a href="mailto:contact@company.com">elevatewebsol@gmail.com</a>
                 </li>
             </ul>
 
             <div class="business-hours">
                 <h4>Business Hours</h4>
                 <p>Monday - Friday: 9am - 6pm</p>
-                <p>Saturday: 10am - 3pm</p>
+                <p>Sunday: 10am - 3pm</p>
             </div>
         </div>
     </div>
@@ -893,7 +765,7 @@ portfolioData.push(
         </div>
 
         <div class="footer-legal">
-            <p>&copy; 2025 DigitalSolutions. All rights reserved.</p>
+            <p>&copy; 2025 ElevateWebSolutions. All rights reserved.</p>
             <div class="legal-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
