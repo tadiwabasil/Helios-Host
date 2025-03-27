@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Solutions</title>
+    <title>Elevate Web Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -84,7 +84,7 @@ portfolioData.push(
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
 </head>
 <body class="font-['Inter'] text-gray-800">
-    <!-- Navigation -->
+    <!-- Navigation
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -102,6 +102,40 @@ portfolioData.push(
             </div>
         </div>
     </nav>
+-->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="#" class="logo">Elevate Web Solutions</a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+</nav>
 
 
     <!-- Hero Section -->
@@ -114,7 +148,7 @@ portfolioData.push(
         <p class="hero-subtitle">Elevate your business with cutting-edge web solutions and strategic digital transformation. We turn your vision into reality.</p>
         <div class="hero-buttons">
             <a href="#contact" class="hero-button primary">Book Consultation</a>
-            <a href="#about" class="hero-button secondary">&nbsp&nbsp&nbsp&nbspLearn More &nbsp&nbsp&nbsp&nbsp&nbsp</a>
+            <a href="#about" class="hero-button secondary">&nbsp&nbsp&nbsp&nbspLearn More &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
         </div>
     </div>
 
@@ -787,6 +821,31 @@ portfolioData.push(
 
 
     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    const toggle = document.querySelector('.mobile-toggle');
+
+    toggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        navbar.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+});
+
+
+
+
+
+
       // Testimonial Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const track = document.querySelector('.testimonial-track');
