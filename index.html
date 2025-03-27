@@ -92,9 +92,10 @@ portfolioData.push(
                     <a href="#" class="text-2xl font-['Pacifico'] text-primary">Elevate Web Solutions</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary">About</a>
                     <a href="#services" class="text-gray-600 hover:text-primary">Services</a>
                     <a href="#portfolio" class="text-gray-600 hover:text-primary">Portfolio</a>
-                    <a href="#about" class="text-gray-600 hover:text-primary">About</a>
+
                     <a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
                     <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">Get Started</a>
                 </div>
@@ -134,6 +135,138 @@ portfolioData.push(
     </div>
 </section>
 
+<!-- About Us Section -->
+<section id="about" class="about-section">
+    <div class="section-header">
+        <h2 class="section-title">About Our Company</h2>
+        <p class="section-subtitle">Crafting digital excellence</p>
+    </div>
+
+    <div class="about-content">
+        <!-- Image Column -->
+        <div class="about-image-column">
+            <div class="image-container">
+                <img src="https://public.readdy.ai/ai/img_res/56edc432524fb368a04fb82e90f703d0.jpg" alt="Our Team" class="main-image">
+                <div class="image-decorator"></div>
+
+                <!-- Achievement Badges
+                <div class="achievement-badge years">
+                    <span class="number">12+</span>
+                    <span class="label">Years Experience</span>
+                </div>
+                -->
+                <div class="achievement-badge projects">
+                    <span class="number">25+</span>
+                    <span class="label">Projects Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="about-text-column">
+            <h3 class="about-heading">Driving digital transformation through innovation</h3>
+
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="mission">Our Mission</button>
+                <button class="tab-btn" data-tab="vision">Our Vision</button>
+                <button class="tab-btn" data-tab="values">Our Values</button>
+            </div>
+
+            <div class="tab-content active" id="mission">
+                <p>We empower businesses to thrive in the digital landscape by delivering cutting-edge solutions tailored to their unique needs. Our mission is to bridge the gap between technology and business goals through innovative design and strategic development.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Client-centric development approach</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Agile and adaptive methodologies</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Future-proof technology stack</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="vision">
+                <p>To become the most trusted digital partner for businesses worldwide, recognized for our technical excellence, creative problem-solving, and unwavering commitment to client success in an increasingly digital future.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Pioneering emerging technologies</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Global reach with local understanding</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Sustainable digital solutions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="values">
+                <p>Our core values define who we are and how we work. Integrity, innovation, and impact guide every decision we make and every solution we deliver.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Transparency in all interactions</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Continuous learning and growth</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <span>Delivering measurable impact</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+
+            <button class="cta-button">
+                <span>Meet Our Team</span>
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Technologies We Use -->
+    <div class="technologies-section">
+        <h4 class="tech-title">Technologies We Excel At</h4>
+        <div class="tech-logos">
+            <div class="tech-logo" data-tooltip="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            </div>
+            <div class="tech-logo" data-tooltip="Node.js">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+            <div class="tech-logo" data-tooltip="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            </div>
+
+            <div class="tech-logo" data-tooltip="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+            </div>
+            <div class="tech-logo" data-tooltip="Figma">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Services Section -->
 <section id="services" class="services-section">
@@ -398,138 +531,7 @@ portfolioData.push(
     <div class="testimonial-deco deco-right"></div>
 </section>
 
-  <!-- About Us Section -->
-<section id="about" class="about-section">
-    <div class="section-header">
-        <h2 class="section-title">About Our Company</h2>
-        <p class="section-subtitle">Crafting digital excellence</p>
-    </div>
 
-    <div class="about-content">
-        <!-- Image Column -->
-        <div class="about-image-column">
-            <div class="image-container">
-                <img src="https://public.readdy.ai/ai/img_res/56edc432524fb368a04fb82e90f703d0.jpg" alt="Our Team" class="main-image">
-                <div class="image-decorator"></div>
-
-                <!-- Achievement Badges
-                <div class="achievement-badge years">
-                    <span class="number">12+</span>
-                    <span class="label">Years Experience</span>
-                </div>
-                -->
-                <div class="achievement-badge projects">
-                    <span class="number">25+</span>
-                    <span class="label">Projects Completed</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Text Column -->
-        <div class="about-text-column">
-            <h3 class="about-heading">Driving digital transformation through innovation</h3>
-
-            <div class="about-tabs">
-                <button class="tab-btn active" data-tab="mission">Our Mission</button>
-                <button class="tab-btn" data-tab="vision">Our Vision</button>
-                <button class="tab-btn" data-tab="values">Our Values</button>
-            </div>
-
-            <div class="tab-content active" id="mission">
-                <p>We empower businesses to thrive in the digital landscape by delivering cutting-edge solutions tailored to their unique needs. Our mission is to bridge the gap between technology and business goals through innovative design and strategic development.</p>
-                <ul class="feature-list">
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Client-centric development approach</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Agile and adaptive methodologies</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Future-proof technology stack</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="tab-content" id="vision">
-                <p>To become the most trusted digital partner for businesses worldwide, recognized for our technical excellence, creative problem-solving, and unwavering commitment to client success in an increasingly digital future.</p>
-                <ul class="feature-list">
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Pioneering emerging technologies</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Global reach with local understanding</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Sustainable digital solutions</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="tab-content" id="values">
-                <p>Our core values define who we are and how we work. Integrity, innovation, and impact guide every decision we make and every solution we deliver.</p>
-                <ul class="feature-list">
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Transparency in all interactions</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Continuous learning and growth</span>
-                    </li>
-                    <li>
-                        <i class="ri-checkbox-circle-fill"></i>
-                        <span>Delivering measurable impact</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="20">0</div>
-                    <div class="stat-label">Clients</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="98">0</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-            </div>
-
-            <button class="cta-button">
-                <span>Meet Our Team</span>
-                <i class="ri-arrow-right-line"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Technologies We Use -->
-    <div class="technologies-section">
-        <h4 class="tech-title">Technologies We Excel At</h4>
-        <div class="tech-logos">
-            <div class="tech-logo" data-tooltip="React">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-            </div>
-            <div class="tech-logo" data-tooltip="Node.js">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-            </div>
-            <div class="tech-logo" data-tooltip="Python">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            </div>
-
-            <div class="tech-logo" data-tooltip="Docker">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-            </div>
-            <div class="tech-logo" data-tooltip="Figma">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
@@ -722,9 +724,8 @@ portfolioData.push(
                 <li><a href="#">Web Development</a></li>
                 <li><a href="#">Mobile Apps</a></li>
                 <li><a href="#">UI/UX Design</a></li>
-                <li><a href="#">Cloud Solutions</a></li>
-                <li><a href="#">Digital Marketing</a></li>
-                <li><a href="#">SEO Services</a></li>
+                <li><a href="#">Hosting Solutions</a></li>
+
             </ul>
         </div>
 
